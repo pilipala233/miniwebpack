@@ -73,13 +73,13 @@ function createAsset(filePath) {
 
 
 function createGraph() {
-const mainAsset = createAsset("./example/main.js");
+const mainAsset = createAsset("../example/main.js");
 //console.log(mainAsset)
 const queue = [mainAsset];
 
 for (const asset of queue) {
     asset.deps.forEach((relativePath) => {
-    const child = createAsset(path.resolve("./example", relativePath));
+    const child = createAsset(path.resolve("../example", relativePath));
     asset.mapping[relativePath] = child.id
     //asset.mapping[relativePath] = child.id;
     queue.push(child);
@@ -110,7 +110,7 @@ function build(graph) {
     //console.log(data)
     const code = ejs.render(template,{data});
   
-    let outputPath = "./dist/bundle.js";
+    let outputPath = "../dist/bundle.js";
     const context = {
       changeOutputPath(path) {
         outputPath = path;
