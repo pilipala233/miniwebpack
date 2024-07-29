@@ -70,7 +70,4 @@ your-project/
 - `ejs`：嵌入式 JavaScript 模板引擎
 - `babel-core`：Babel 核心，用于转换 AST
 
-## 许可证
-
-本项目采用 MIT 许可证 - 详细信息请参阅 [LICENSE](LICENSE) 文件。
 
